@@ -40,8 +40,7 @@ Write-Host ""
 
 # Push to GitHub
 Write-Host "📤 Pushing to GitHub..." -ForegroundColor Yellow
-git branch -M main
-git push -u origin main
+git push -u origin master
 
 if ($LASTEXITCODE -eq 0) {
     Write-Host ""
