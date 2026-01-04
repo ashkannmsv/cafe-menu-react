@@ -111,13 +111,29 @@ Contemporary blue-green palette with fresh vibes.
 
 ## 📸 Screenshots
 
-> **Note:** To add screenshots, capture your app and place images in the `screenshots/` folder
+### Intro Page
+<img src="./screenshots/intro-page.png" alt="Intro Page" width="800">
 
-### Suggested Screenshots:
-1. `intro-page.png` - Landing page with cafe background
-2. `gray-theme.png` - Gray theme menu view
-3. `warm-theme.png` - Warm cafe theme view
-4. `luxury-theme.png` - Luxury black & gold theme
+### Main Menu
+<img src="./screenshots/main-menu.png" alt="Main Menu" width="800">
+
+### Themes Showcase
+
+<div align="center">
+
+#### Gray Theme
+<img src="./screenshots/theme1.png" alt="Gray Theme" width="400">
+
+#### Warm Theme
+<img src="./screenshots/theme2.png" alt="Warm Theme" width="400">
+
+#### Luxury Theme
+<img src="./screenshots/theme3.png" alt="Luxury Theme" width="400">
+
+#### Modern Theme
+<img src="./screenshots/theme4.png" alt="Modern Theme" width="400">
+
+</div>
 5. `modern-theme.png` - Modern blue-green theme
 6. `mobile-view.png` - Mobile responsive view
 
