@@ -4,9 +4,8 @@
   "description": "A beautiful, modern, and responsive cafe menu application with multiple themes, smooth animations, and an immersive user experience. Perfect for coffee shops, restaurants, and cafes.",
   "private": true,
   "author": {
-    "name": "Your Name",
-    "email": "your.email@example.com",
-    "url": "https://github.com/yourusername"
+    "name": "Ashkan",
+    "url": "https://github.com/ashkannmsv"
   },
   "keywords": [
     "react",
@@ -27,11 +26,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/cafe-menu-react.git"
+    "url": "https://github.com/ashkannmsv/cafe-menu-react.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/cafe-menu-react/issues"
+    "url": "https://github.com/ashkannmsv/cafe-menu-react/issues"
   },
+  "homepage": "https://cafe-menu-react.vercel.app",
   "license": "MIT",
   "dependencies": {
     "react": "^18.2.0",
