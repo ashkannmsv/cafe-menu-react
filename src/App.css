@@ -1,0 +1,767 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== THEME VARIABLES ========== */
+/* Gray Theme (Default) */
+.app.theme-gray {
+  --bg-gradient-1: #6c6c6c;
+  --bg-gradient-2: #272727;
+  --bg-gradient-3: #000000;
+  
+  --header-bg: rgb(138, 138, 138);
+  --header-shadow-1: rgba(0, 0, 0, 0);
+  --header-shadow-2: rgb(31, 31, 31);
+  
+  --tab-bg: rgba(255, 255, 255, 0.918);
+  --tab-color: black;
+  --tab-border: rgba(0, 0, 0, 0.392);
+  
+  --tab-hover-bg-1: #787878;
+  --tab-hover-bg-2: #686868;
+  
+  --tab-active-bg-1: #c6c6c6;
+  --tab-active-bg-2: #8f8f8f;
+  --tab-active-color: white;
+  
+  --gradient-overlay: rgba(0, 0, 0, 0.8);
+  --section-title-color: #ffffff;
+  
+  /* Cards & UI Elements */
+  --card-bg: #2d2d2d;
+  --card-border: rgba(255, 255, 255, 0.1);
+  --card-shadow: rgba(0, 0, 0, 0.5);
+  --card-text-primary: #ffffff;
+  --card-text-secondary: #b0b0b0;
+  --card-price-color: #ffffff;
+  
+  --scrollbar-track: #2d2d2d;
+  --scrollbar-thumb: #5a5a5a;
+  --scrollbar-thumb-hover: #6a6a6a;
+  
+  --suggestion-gradient: rgba(37, 34, 32, 0.9);
+}
+
+/* Warm Cafe Theme */
+.app.theme-warm {
+  --bg-gradient-1: #8B4513;
+  --bg-gradient-2: #D2691E;
+  --bg-gradient-3: #CD853F;
+  
+  --header-bg: linear-gradient(180deg, #F5DEB3 0%, #DEB887 100%);
+  --header-shadow-1: rgba(255, 255, 255, 0.3);
+  --header-shadow-2: rgba(139, 69, 19, 0.3);
+  
+  --tab-bg: linear-gradient(180deg, #FFEFD5 0%, #FFE4B5 100%);
+  --tab-color: #8B4513;
+  --tab-border: rgba(139, 69, 19, 0.3);
+  
+  --tab-hover-bg-1: #FFD700;
+  --tab-hover-bg-2: #FFA500;
+  --tab-hover-color: #fff;
+  
+  --tab-active-bg-1: #FF8C00;
+  --tab-active-bg-2: #FF6347;
+  --tab-active-color: #fff;
+  
+  --gradient-overlay: rgba(139, 69, 19, 0.7);
+  --section-title-color: #FFE4B5;
+  
+  /* Cards & UI Elements - Warm Coffee Tones */
+  --card-bg: linear-gradient(135deg, #5D4037 0%, #4E342E 100%);
+  --card-border: rgba(255, 193, 7, 0.3);
+  --card-shadow: rgba(139, 69, 19, 0.6);
+  --card-text-primary: #FFE4B5;
+  --card-text-secondary: #D7CCC8;
+  --card-price-color: #FFD54F;
+  
+  --scrollbar-track: #6D4C41;
+  --scrollbar-thumb: #A1887F;
+  --scrollbar-thumb-hover: #BCAAA4;
+  
+  --suggestion-gradient: rgba(93, 64, 55, 0.95);
+}
+
+/* Luxury Theme */
+.app.theme-luxury {
+  --bg-gradient-1: #1a1a1a;
+  --bg-gradient-2: #2d2d2d;
+  --bg-gradient-3: #0a0a0a;
+  
+  --header-bg: linear-gradient(180deg, #1c1c1c 0%, #0a0a0a 100%);
+  --header-shadow-1: rgba(212, 175, 55, 0.3);
+  --header-shadow-2: rgba(212, 175, 55, 0.2);
+  
+  --tab-bg: linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%);
+  --tab-color: #D4AF37;
+  --tab-border: rgba(212, 175, 55, 0.4);
+  
+  --tab-hover-bg-1: #3a3a3a;
+  --tab-hover-bg-2: #2a2a2a;
+  --tab-hover-color: #FFD700;
+  
+  --tab-active-bg-1: #D4AF37;
+  --tab-active-bg-2: #B8960F;
+  --tab-active-color: #000;
+  
+  --gradient-overlay: rgba(0, 0, 0, 0.9);
+  --section-title-color: #D4AF37;
+  
+  /* Cards & UI Elements - Luxury Black & Gold */
+  --card-bg: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+  --card-border: rgba(212, 175, 55, 0.5);
+  --card-shadow: rgba(212, 175, 55, 0.3);
+  --card-text-primary: #D4AF37;
+  --card-text-secondary: #9e9e9e;
+  --card-price-color: #FFD700;
+  
+  --scrollbar-track: #1a1a1a;
+  --scrollbar-thumb: #D4AF37;
+  --scrollbar-thumb-hover: #FFD700;
+  
+  --suggestion-gradient: rgba(10, 10, 10, 0.95);
+}
+
+/* Modern Theme */
+.app.theme-modern {
+  --bg-gradient-1: #1e3a5f;
+  --bg-gradient-2: #2ecc71;
+  --bg-gradient-3: #16213e;
+  
+  --header-bg: linear-gradient(180deg, #34495e 0%, #2c3e50 100%);
+  --header-shadow-1: rgba(52, 152, 219, 0.3);
+  --header-shadow-2: rgba(46, 204, 113, 0.2);
+  
+  --tab-bg: linear-gradient(180deg, #ecf0f1 0%, #bdc3c7 100%);
+  --tab-color: #2c3e50;
+  --tab-border: rgba(52, 152, 219, 0.3);
+  
+  --tab-hover-bg-1: #3498db;
+  --tab-hover-bg-2: #2980b9;
+  --tab-hover-color: #fff;
+  
+  --tab-active-bg-1: #2ecc71;
+  --tab-active-bg-2: #27ae60;
+  --tab-active-color: #fff;
+  
+  --gradient-overlay: rgba(44, 62, 80, 0.8);
+  --section-title-color: #3498db;
+  
+  /* Cards & UI Elements - Modern Blue-Green */
+  --card-bg: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  --card-border: rgba(52, 152, 219, 0.4);
+  --card-shadow: rgba(52, 152, 219, 0.4);
+  --card-text-primary: #ecf0f1;
+  --card-text-secondary: #95a5a6;
+  --card-price-color: #2ecc71;
+  
+  --scrollbar-track: #34495e;
+  --scrollbar-thumb: #3498db;
+  --scrollbar-thumb-hover: #5dade2;
+  
+  --suggestion-gradient: rgba(44, 62, 80, 0.95);
+}
+
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--bg-gradient-1) 0%, var(--bg-gradient-2) 50%, var(--bg-gradient-3) 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 15s ease infinite;
+  padding-bottom: 5rem;
+  transition: background 0.5s ease;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.app::before {
+  content: '';
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
+  animation: floatBackground 20s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes floatBackground {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate(5%, 5%) rotate(5deg);
+  }
+  66% {
+    transform: translate(-5%, 3%) rotate(-3deg);
+  }
+}
+
+/* Theme Selector Footer */
+.theme-selector {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 1rem 1rem 1.2rem;
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.theme-selector-label {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.theme-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 600px;
+}
+
+.theme-btn {
+  padding: 0.7rem 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  min-width: 90px;
+  flex: 0 1 auto;
+}
+
+.theme-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+.theme-btn.active {
+  background: rgba(255, 255, 255, 0.95);
+  color: #000;
+  border-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.3);
+}
+
+/* Theme Selector Mobile */
+@media (max-width: 768px) {
+  .theme-selector {
+    padding: 0.8rem 0.8rem 1rem;
+  }
+  
+  .theme-selector-label {
+    font-size: 0.7rem;
+  }
+  
+  .theme-buttons {
+    gap: 0.6rem;
+  }
+  
+  .theme-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+    min-width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .theme-selector {
+    padding: 0.7rem 0.6rem 0.9rem;
+  }
+  
+  .theme-selector-label {
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+  }
+  
+  .theme-buttons {
+    gap: 0.3rem;
+  }
+  
+  .theme-btn {
+    padding: 0.45rem 0.6rem;
+    font-size: 0.65rem;
+    min-width: auto;
+    flex: 1;
+    letter-spacing: 0.2px;
+  }
+}
+
+/* Top Navigation Bar */
+.header {
+  background: var(--header-bg);
+  /* margin-bottom: 10px; */
+  box-shadow: 
+    inset 0 3px 60px var(--header-shadow-1),
+    inset 0 -30px 60px var(--header-shadow-2),
+    0 3px 5px rgba(0, 0, 0, 0.2),
+    0 8px 32px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: all 0.5s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 60px;
+  background: linear-gradient(to right, transparent, var(--gradient-overlay));
+  pointer-events: none;
+  z-index: 2;
+  opacity: var(--tabs-right-opacity, 0);
+  transition: opacity 0.2s ease-out;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  background: linear-gradient(to left, transparent, var(--gradient-overlay));
+  pointer-events: none;
+  z-index: 2;
+  opacity: var(--tabs-left-opacity, 0);
+  transition: opacity 0.2s ease-out;
+}
+
+.tabs-container {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+  background: transparent;
+  padding: 0;
+}
+
+.tabs-container::-webkit-scrollbar {
+  height: 0;
+  display: none;
+}
+
+.tabs-container::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.tabs-container::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.tabs-container::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 1.8rem;
+  min-width: min-content;
+}
+
+.tab {
+  padding: 0.9rem 2.1rem;
+  background: var(--tab-bg);
+  color: var(--tab-color);
+  border: none;
+  border-radius: 14px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 700;
+  font-family: 'Segoe UI', Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
+  box-shadow: 
+    inset 0 1px 3px rgba(255, 255, 255, 0.534),
+    inset 0 -3px 7px rgba(0, 0, 0, 0.599);
+  white-space: nowrap;
+  position: relative;
+  text-transform: lowercase;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: 1px solid var(--tab-border);
+}
+
+.tab::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 10%;
+  right: 10%;
+  height: 35%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, transparent 100%);
+  border-radius: 10px 10px 0 0;
+  pointer-events: none;
+}
+
+.tab:hover {
+  background: linear-gradient(180deg, var(--tab-hover-bg-1) 0%, var(--tab-hover-bg-2) 100%);
+  color: var(--tab-hover-color, inherit);
+  transform: translateY(-2px);
+  box-shadow: 
+    inset 0 1px 3px rgba(255, 255, 255, 0.35),
+    inset 0 -2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.tab.active {
+  background: linear-gradient(180deg, var(--tab-active-bg-1) 0%, var(--tab-active-bg-2) 100%);
+  color: var(--tab-active-color);
+  box-shadow: 
+    inset 0 12px 16px rgba(66, 66, 66, 0.5),
+    inset 0 3px 7px rgba(0, 0, 0, 0.541),
+    0 1px 2px rgba(255, 255, 255, 0.15),
+    0 0 20px rgba(255, 255, 255, 0.1);
+  transform: translateY(1px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+.tab.active::before {
+  display: none;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 
+      inset 0 12px 16px rgba(66, 66, 66, 0.5),
+      inset 0 3px 7px rgba(0, 0, 0, 0.541),
+      0 1px 2px rgba(255, 255, 255, 0.15),
+      0 0 20px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: 
+      inset 0 12px 16px rgba(66, 66, 66, 0.5),
+      inset 0 3px 7px rgba(0, 0, 0, 0.541),
+      0 1px 2px rgba(255, 255, 255, 0.15),
+      0 0 25px rgba(255, 255, 255, 0.2);
+  }
+}
+
+.content {
+  padding: 2rem 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.section-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--section-title-color);
+  margin-bottom: 1.5rem;
+  text-transform: capitalize;
+  transition: color 0.5s ease;
+}
+
+/* Suggestions Section */
+.suggestions-top-section {
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.suggestions-top-section::after {
+  content: '';
+  position: absolute;
+  top: 2rem;
+  right: 0;
+  bottom: 0.8rem;
+  width: 80px;
+  background: linear-gradient(to right, transparent, var(--suggestion-gradient));
+  pointer-events: none;
+  z-index: 1;
+  opacity: var(--suggestions-right-opacity, 0);
+  transition: opacity 0.2s ease-out;
+}
+
+.suggestions-top-section::before {
+  content: '';
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  bottom: 0.8rem;
+  width: 80px;
+  background: linear-gradient(to left, transparent, var(--suggestion-gradient));
+  pointer-events: none;
+  z-index: 1;
+  opacity: var(--suggestions-left-opacity, 0);
+  transition: opacity 0.2s ease-out;
+}
+
+.suggestions-scroll-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  padding-bottom: 0.8rem;
+}
+
+.suggestions-scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.suggestions-scroll-container::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  border-radius: 10px;
+}
+
+.suggestions-scroll-container::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.suggestions-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+.suggestions-scroll-grid {
+  display: flex;
+  gap: 2rem;
+  min-width: min-content;
+}
+
+.suggestions-scroll-grid > * {
+  flex: 0 0 220px;
+}
+
+/* Products Section */
+.products-section {
+  margin-bottom: 2rem;
+}
+
+.products-scroll-container {
+  padding-right: 0.5rem;
+}
+
+.products-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+/* ===== TABLET & SMALL DESKTOP (max-width: 1024px) ===== */
+@media (max-width: 1024px) {
+  /* Reduce maximum content width for tablets */
+  .content {
+    max-width: 100%;
+    padding: 1.8rem 1.3rem;
+  }
+
+  /* Adjust suggestion card size for tablets */
+  .suggestions-scroll-grid > * {
+    flex: 0 0 200px;
+  }
+
+  /* Optimize section title size */
+  .section-title {
+    font-size: 1.25rem;
+  }
+
+  /* Improve theme button layout */
+  .theme-btn {
+    padding: 0.65rem 1.3rem;
+    font-size: 0.85rem;
+    min-width: 85px;
+  }
+}
+
+/* ===== TABLET (max-width: 768px) ===== */
+@media (max-width: 768px) {
+  /* Reduce header padding for tablets */
+  .header {
+    padding: 0.6rem 0;
+  }
+
+  /* Optimize tab sizing and spacing */
+  .tabs {
+    gap: 0.8rem;
+    padding: 0.8rem 1.3rem;
+  }
+  
+  .tab {
+    padding: 0.75rem 1.6rem;
+    font-size: 1rem;
+    border-radius: 12px;
+  }
+
+  /* Adjust content padding */
+  .content {
+    padding: 1.5rem 1rem;
+  }
+
+  /* Optimize section titles for tablet */
+  .section-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Limit suggestions height on tablets */
+  .suggestions-scroll-container {
+    max-height: calc(100vh - 350px);
+  }
+
+  /* Reduce gaps in suggestion grid */
+  .suggestions-scroll-grid {
+    gap: 1.5rem;
+  }
+
+  /* Adjust suggestion card size */
+  .suggestions-scroll-grid > * {
+    flex: 0 0 190px;
+  }
+
+  /* Reduce spacing in suggestions section */
+  .suggestions-top-section {
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* ===== MOBILE (max-width: 480px) ===== */
+@media (max-width: 480px) {
+  /* Minimize tab spacing for mobile */
+  .tabs {
+    gap: 0.6rem;
+    padding: 0.6rem 1rem;
+  }
+  
+  /* Smaller tabs for mobile screens */
+  .tab {
+    padding: 0.6rem 1.4rem;
+    font-size: 0.9rem;
+    border-radius: 10px;
+  }
+
+  /* Reduce content padding for mobile */
+  .content {
+    padding: 1rem 0.8rem;
+  }
+
+  /* Smaller section titles */
+  .section-title {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  /* Minimize header height */
+  .header {
+    padding: 0.5rem 0;
+  }
+
+  /* Adjust suggestions container height */
+  .suggestions-scroll-container {
+    max-height: calc(100vh - 400px);
+  }
+
+  /* Tighter gaps for mobile */
+  .suggestions-scroll-grid {
+    gap: 1.2rem;
+  }
+
+  /* Mobile-sized suggestion cards - larger for better readability */
+  .suggestions-scroll-grid > * {
+    flex: 0 0 200px;
+  }
+
+  /* Remove products grid for mobile (use flex column) */
+  .products-grid {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+}
+
+/* ===== EXTRA SMALL MOBILE (max-width: 360px) ===== */
+@media (max-width: 360px) {
+  /* Ultra compact tabs for small phones */
+  .tabs {
+    gap: 0.5rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .tab {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.85rem;
+  }
+
+  /* Minimal content padding */
+  .content {
+    padding: 0.8rem 0.6rem;
+  }
+
+  /* Very small section titles */
+  .section-title {
+    font-size: 0.95rem;
+    margin-bottom: 0.7rem;
+  }
+
+  /* Compact suggestion cards - optimized for small screens */
+  .suggestions-scroll-grid > * {
+    flex: 0 0 180px;
+  }
+
+  /* Smaller gaps */
+  .suggestions-scroll-grid {
+    gap: 1rem;
+  }
+
+  /* Compact theme buttons */
+  .theme-btn {
+    padding: 0.45rem 0.9rem;
+    font-size: 0.7rem;
+    min-width: 65px;
+    letter-spacing: 0.3px;
+  }
+
+  .theme-selector {
+    padding: 0.6rem 0.5rem 0.8rem;
+  }
+
+  .theme-selector-label {
+    font-size: 0.6rem;
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "name": "cafe-menu-react",
+  "version": "1.0.0",
+  "description": "A beautiful, modern, and responsive cafe menu application with multiple themes, smooth animations, and an immersive user experience. Perfect for coffee shops, restaurants, and cafes.",
+  "private": true,
+  "author": {
+    "name": "Your Name",
+    "email": "your.email@example.com",
+    "url": "https://github.com/yourusername"
+  },
+  "keywords": [
+    "react",
+    "cafe",
+    "menu",
+    "restaurant",
+    "coffee-shop",
+    "cafe-menu",
+    "react-menu",
+    "menu-app",
+    "responsive",
+    "themes",
+    "modern-design",
+    "animations",
+    "single-page-app",
+    "cafe-ui",
+    "restaurant-menu"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/cafe-menu-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/cafe-menu-react/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

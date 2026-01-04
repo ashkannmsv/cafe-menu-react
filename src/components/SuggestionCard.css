@@ -1,0 +1,267 @@
+.suggestion-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 
+    0 5px 10px var(--card-shadow),
+    inset 0 2px 4px rgba(255, 255, 255, 0.1),
+    inset 0 -4px 8px rgba(0, 0, 0, 0.25);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, background 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-shrink: 0;
+  border: 1px solid var(--card-border);
+  position: relative;
+  animation: fadeInUp 0.6s ease-out backwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.suggestion-card:nth-child(1) { animation-delay: 0.1s; }
+.suggestion-card:nth-child(2) { animation-delay: 0.2s; }
+.suggestion-card:nth-child(3) { animation-delay: 0.3s; }
+.suggestion-card:nth-child(4) { animation-delay: 0.4s; }
+.suggestion-card:nth-child(5) { animation-delay: 0.5s; }
+
+.suggestion-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 12px 24px var(--card-shadow),
+    inset 0 2px 4px rgba(255, 255, 255, 0.1),
+    inset 0 -4px 8px rgba(0, 0, 0, 0.25),
+    0 0 30px rgba(255, 255, 255, 0.08);
+}
+
+.suggestion-image-container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 
+    0 3px 6px var(--card-shadow),
+    inset 0 2px 4px rgba(255, 255, 255, 0.1),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid var(--card-border);
+  transition: all 0.5s ease;
+}
+
+.suggestion-card:hover .suggestion-image-container {
+  transform: scale(1.05);
+  box-shadow: 
+    0 5px 10px var(--card-shadow),
+    inset 0 2px 4px rgba(255, 255, 255, 0.15),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.suggestion-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.suggestion-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.suggestion-cart-btn {
+  background: #5a5a5a;
+  color: white;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.suggestion-cart-btn:hover {
+  background: #4a4a4a;
+  transform: scale(1.1);
+}
+
+.suggestion-cart-btn:active {
+  transform: scale(0.95);
+}
+
+.suggestion-cart-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+.suggestion-details {
+  flex: 1;
+}
+
+.suggestion-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--card-text-primary);
+  margin-bottom: 0.3rem;
+  text-transform: lowercase;
+  transition: color 0.5s ease;
+}
+
+.suggestion-description {
+  font-size: 0.9rem;
+  color: var(--card-text-secondary);
+  margin: 0 0 0.5rem 0;
+  transition: color 0.5s ease;
+}
+
+.suggestion-price-tag {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--card-price-color);
+  margin: 0;
+  transition: color 0.5s ease;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+/* ===== TABLET (max-width: 768px) ===== */
+@media (max-width: 768px) {
+  /* Optimize card for tablets */
+  .suggestion-card {
+    padding: 1.2rem;
+    border-radius: 20px;
+  }
+
+  /* Adjust image container */
+  .suggestion-image-container {
+    padding: 0.8rem;
+    min-height: 150px;
+  }
+
+  /* Tablet text sizes */
+  .suggestion-name {
+    font-size: 1.15rem;
+  }
+
+  .suggestion-description {
+    font-size: 0.88rem;
+  }
+
+  .suggestion-price-tag {
+    font-size: 1.08rem;
+  }
+
+  /* Smaller cart button */
+  .suggestion-cart-btn {
+    width: 42px;
+    height: 42px;
+  }
+
+  .suggestion-cart-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* ===== MOBILE (max-width: 480px) ===== */
+@media (max-width: 480px) {
+  /* Compact mobile card */
+  .suggestion-card {
+    padding: 1rem;
+    border-radius: 16px;
+  }
+
+  /* Smaller image container */
+  .suggestion-image-container {
+    padding: 0.7rem;
+    margin-bottom: 0.8rem;
+    min-height: 120px;
+  }
+
+  /* Mobile text sizes */
+  .suggestion-name {
+    font-size: 1.05rem;
+  }
+
+  .suggestion-description {
+    font-size: 0.82rem;
+  }
+
+  .suggestion-price-tag {
+    font-size: 1rem;
+  }
+
+  /* Smaller cart button for mobile */
+  .suggestion-cart-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .suggestion-cart-btn svg {
+    width: 19px;
+    height: 19px;
+  }
+}
+
+/* ===== EXTRA SMALL MOBILE (max-width: 360px) ===== */
+@media (max-width: 360px) {
+  /* Ultra compact card */
+  .suggestion-card {
+    padding: 0.85rem;
+    border-radius: 14px;
+    gap: 0.8rem;
+  }
+
+  /* Smaller image */
+  .suggestion-image-container {
+    padding: 0.6rem;
+    margin-bottom: 0.7rem;
+    min-height: 100px;
+    height: 120px;
+  }
+
+  /* Very compact text */
+  .suggestion-name {
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .suggestion-description {
+    font-size: 0.75rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .suggestion-price-tag {
+    font-size: 0.92rem;
+  }
+
+  /* Tiny cart button */
+  .suggestion-cart-btn {
+    width: 34px;
+    height: 34px;
+  }
+
+  .suggestion-cart-btn svg {
+    width: 17px;
+    height: 17px;
+  }
+}
